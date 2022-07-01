@@ -5,7 +5,7 @@ from vietnamese_formatter import vietnamese2id
 NUM_PROVINCES = 63
 
 if __name__ == '__main__':
-    gdf = gpd.read_file('diaphantinh.json')
+    gdf = gpd.read_file('data/diaphantinh.json')
     for gid in range(1, NUM_PROVINCES+1):
         cur = gdf[gdf.gid == gid]
         province = str(cur.ten_tinh).split('\n')[0][2:].strip()
